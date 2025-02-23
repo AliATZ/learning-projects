@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    ul {
+      list-style: none;
+      counter-reset: section;
+    }
+
+    li {
+      font-size: 18px;
+      font-family: Arial, sans-serif;
+    }
+
+    li::before {
+      counter-increment: section;
+      content: counter(section) ")";
+      font-weight: bold;
+      color: magenta;
+      margin-right: 5px;
+    }
+
+    /* Nested list numbering */
+    ul ul {
+      counter-reset: subsection;
+    }
+
+    ul ul li::before {
+      counter-increment: subsection;
+      content: counter(section) "." counter(subsection) ")";
+      font-weight: bold;
+      color: magenta;
+    }
+
+    /* Third-level list */
+    ul ul ul {
+      counter-reset: subsubsection;
+    }
+
+    ul ul ul li::before {
+      counter-increment: subsubsection;
+      content: counter(section) "." counter(subsection) "." counter(subsubsection) ")";
+      font-weight: bold;
+      color: magenta;
+    }
+
+  </style>
+  <title>exercise3</title>
+</head>
+<body>
+
+<ul>
+  <li>Item1</li>
+  <li>Item2
+    <ul>
+      <li>Item3</li>
+      <li>Item4</li>
+      <li>Item5</li>
+    </ul>
+  </li>
+  <li>Item6
+    <ul>
+      <li>Item7</li>
+      <li>Item8
+        <ul>
+          <li>Item9</li>
+          <li>Item10</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Item11</li>
+</ul>
+
+</body>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>exercise4</title>
+    <style>
+    ol {
+    list-style: none;
+    counter-reset: list-counter;
+    }
+
+    li {
+    counter-increment: list-counter;
+    }
+
+    li::marker {
+    content: counter(list-counter) ") ";
+    font-weight: bold;
+    color: gray;
+    }
+    </style>
+</head>
+<body>
+<ol type="1"  >
+    <li>item 1</li>
+    <li>item 2</li>
+    <li>item 3</li>
+    <li>item 4</li>
+    <li>item 5</li>
+    <li>item 6</li>
+    <li>item 7</li>
+    <li>item 8</li>
+    <li>item 9</li>
+    <li>item 10</li>
+    <li>item 11</li>
+</ol>
+
+
+<ul style="list-style: none; padding: 0;">
+    <li>🚜 Item1</li>
+    <li>🚜 Item2</li>
+    <li>🚜 Item3</li>
+    <li>🚜 Item4</li>
+    <li>🚜 Item5</li>
+    <li>🚜 Item6</li>
+    <li>🚜 Item7</li>
+    <li>🚜 Item8</li>
+    <li>🚜 Item9</li>
+    <li>🚜 Item10</li>
+    <li>🚜 Item11</li>
+</ul>
+</body>
+</html>
